@@ -1,4 +1,3 @@
-- ## 👋 Welcome to My GitHub Profile!
 # Parshv Patel
 
 **Data Science Student @ UC Berkeley | AI/ML Engineer | Open Source Enthusiast**
