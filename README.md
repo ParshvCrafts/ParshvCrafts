@@ -20,7 +20,7 @@
 
 ## 💻 Featured Projects
 
-### [AtlasMind AI Trip Planner](https://github.com/yourusername/atlasmind)
+### [AtlasMind AI Trip Planner](https://atlasmind-ai-trip-planner.vercel.app/)
 **AI SaaS | FastAPI • React • PostgreSQL • LangGraph • LangChain • Stripe**
 
 A production full-stack AI trip planner powered by a 6-agent LangGraph workflow that generates personalized itineraries in under 60 seconds.
@@ -32,7 +32,7 @@ A production full-stack AI trip planner powered by a 6-agent LangGraph workflow 
 
 ---
 
-### [SpaceX Falcon 9 Landing Predictor](https://github.com/yourusername/spacex-landing)
+### [SpaceX Falcon 9 Landing Predictor](https://spacex-landing-predictor.onrender.com)
 **ML + Analytics | Python • scikit-learn • SQL • Plotly • Dash**
 
 End-to-end machine learning pipeline predicting Falcon 9 first-stage landing outcomes to inform cost-saving strategies.
@@ -44,7 +44,7 @@ End-to-end machine learning pipeline predicting Falcon 9 first-stage landing out
 
 ---
 
-### [AI Text Summarizer](https://github.com/yourusername/text-summarizer)
+### [AI Text Summarizer](https://text-summarizer-lilac.vercel.app/)
 **NLP + Full-Stack | PyTorch • FLAN-T5 • FastAPI • React • Groq**
 
 Production-grade text summarization platform featuring a fine-tuned FLAN-T5 transformer model.
@@ -57,7 +57,7 @@ Production-grade text summarization platform featuring a fine-tuned FLAN-T5 tran
 
 ---
 
-### [Parking Spot Detection System](https://github.com/yourusername/parking-detection)
+### [Parking Spot Detection System](https://youtu.be/X6UXYyk14Hw)
 **Computer Vision + ML | OpenCV • PyTorch • scikit-learn • MediaPipe**
 
 Real-time parking occupancy detection system processing 1920×1080 video streams.
@@ -115,15 +115,6 @@ Investigated how automated systems encode human bias across hiring, finance, and
 
 ---
 
-## 🤝 Community & Leadership
-
-- **NAVCAL Fellow** @ UC Berkeley – Empowering marginalized students through near-peer mentorship and resource navigation
-- **Volunteer Tutor** @ Harmony Elementary (230+ hours) – Taught math and English using innovative hands-on methods
-- **Founder & President** @ Math Club – Grew club to 25+ students with tiered learning groups and peer mentorship
-- **Berkeley Changemaker Certificate** – Completed interdisciplinary program in critical thinking and purpose-driven leadership
-
----
-
 ## 📫 Let's Connect
 
 - 💼 [LinkedIn](https://www.linkedin.com/in/parshv-patel-65a90326b/)
@@ -131,13 +122,4 @@ Investigated how automated systems encode human bias across hiring, finance, and
 - 📧 parshvpatel_0910@berkeley.edu
 - 📍 Berkeley, CA
 
----
-
-## 📊 GitHub Stats
-
-![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical)
-
----
-
-*"Building AI systems that are not just powerful, but also fair, transparent, and accessible to everyone."*
 
