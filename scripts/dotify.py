@@ -79,7 +79,7 @@ def build(src, out_base, cols, detail, gap, square, key, zoom):
     # One variant per theme, because the same pixels that sit well against
     # #0d1117 wash out against white. The light pass is darkened and its
     # contrast pushed so the portrait still has weight on a white page.
-    VARIANTS = {"dark": (1.00, 1.00), "light": (0.74, 1.22)}
+    VARIANTS = {"dark": (1.02, 1.10), "light": (0.68, 1.34)}
 
     cell = 10.0
     r_max = cell / 2.0 - gap

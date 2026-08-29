@@ -21,9 +21,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/portrait-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/portrait-light.svg">
-  <img src="assets/portrait-dark.svg" width="230" alt="Parshv Patel, rendered as a dot matrix">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/portrait-v2-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/portrait-v2-light.svg">
+  <img src="assets/portrait-v2-dark.svg" width="300" alt="Parshv Patel, rendered as a dot matrix">
 </picture>
 
 <br>
