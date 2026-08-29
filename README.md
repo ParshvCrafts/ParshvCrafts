@@ -41,7 +41,7 @@
 <a href="https://www.portfolio.parshvpatel.com/"><img src="https://img.shields.io/badge/Portfolio-39D353?style=for-the-badge&logo=vercel&logoColor=0D1117" alt="Portfolio"></a>
 <a href="https://github.com/ParshvCrafts?tab=repositories"><img src="https://img.shields.io/badge/Repositories-F97316?style=for-the-badge&logo=github&logoColor=white" alt="Repositories"></a>
 
-<br><br>
+<br>
 
 <img src="https://img.shields.io/badge/UC%20Berkeley-B.A.%20Data%20Science%20'29-216E39?style=flat-square&logo=googlescholar&logoColor=white" alt="UC Berkeley, B.A. Data Science 2029">
 <img src="https://img.shields.io/badge/GPA-4.00%20%C2%B7%20Dean's%20List%20%C3%972-26A641?style=flat-square&logo=academia&logoColor=white" alt="4.00 GPA, Dean's List twice">
@@ -420,4 +420,4 @@ If you are hiring, building something adjacent, or just want to compare notes on
 
 </div>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:0D1117,50:0E4429,100:39D353" alt="">
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:0E4429,50:26A641,100:39D353" alt="">
