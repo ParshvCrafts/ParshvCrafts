@@ -24,13 +24,16 @@ import urllib.request
 API = "https://api.github.com/graphql"
 
 THEMES = {
+    # Headings and the streak figures are deliberately neutral rather than green.
+    # Green is already carrying the activity chart and the contribution graph;
+    # using it for the type as well made the whole section read as one flat wash.
     "dark": {
-        "bg": "#0d1117", "border": "#30363d", "title": "#39d353",
+        "bg": "#0d1117", "border": "#30363d", "title": "#ffffff",
         "text": "#c9d1d9", "muted": "#8b949e", "accent": "#26a641",
         "grid": "#21262d",
     },
     "light": {
-        "bg": "#ffffff", "border": "#d0d7de", "title": "#216e39",
+        "bg": "#ffffff", "border": "#d0d7de", "title": "#1f2328",
         "text": "#24292f", "muted": "#57606a", "accent": "#2ea043",
         "grid": "#eaeef2",
     },
