@@ -15,7 +15,8 @@
   Portrait: assets/portrait-v2-{dark,light}.svg. The -v2 suffix is deliberate:
   GitHub caches README images hard, so a changed portrait needs a changed name
   to reach anyone. Regenerate with:
-       python scripts/dotify.py scripts/source-portrait.jpg -o assets/portrait-v2 \n              --cols 132 --detail 0.5 --key 78 --zoom 0.84
+       python scripts/dotify.py scripts/source-portrait.jpg -o assets/portrait-v2 \
+              --cols 132 --detail 0.5 --key 78 --zoom 0.84
   ============================================================================
 -->
 
