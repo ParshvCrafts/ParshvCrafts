@@ -12,9 +12,10 @@
        <picture> + prefers-color-scheme, because GitHub renders READMEs in both.
     2. Tech is shown as logos only, never logo-plus-text, so the grid stays even.
        Icons come from go-skill-icons (uniform 48px tiles, theme-aware).
-  Portrait: assets/portrait-{dark,light}.svg, regenerate with
-       python scripts/dotify.py scripts/source-portrait.jpg -o assets/portrait \
-              --cols 96 --detail 0.55 --key 82 --zoom 0.86
+  Portrait: assets/portrait-v2-{dark,light}.svg. The -v2 suffix is deliberate:
+  GitHub caches README images hard, so a changed portrait needs a changed name
+  to reach anyone. Regenerate with:
+       python scripts/dotify.py scripts/source-portrait.jpg -o assets/portrait-v2 \n              --cols 132 --detail 0.5 --key 78 --zoom 0.84
   ============================================================================
 -->
 
