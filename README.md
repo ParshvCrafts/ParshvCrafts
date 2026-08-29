@@ -3,9 +3,10 @@
   ParshvCrafts - GitHub Profile README
   ----------------------------------------------------------------------------
   Two colour families, used for different jobs:
-    Blue   #0a66c2 / #2f81f7 / #58a6ff   waves, typing banner, snake
-    Green  #39d353 / #26a641 / #006d32   contribution data ONLY
-    Indigo #4f46e5 / #6366f1 / #818cf8   credential badges and Portfolio
+    Blue   #0a66c2 / #2f81f7 / #58a6ff   waves and snake
+    Green  #39d353 / #26a641 / #006d32   typing banner and contribution data
+    Indigo #6366f1                       the Portfolio button
+    Cyan   #0e7490 / #0891b2 / #22d3ee   the credential badges
   Green is reserved for things that represent real contribution activity, so
   the page does not read as one flat wash of it.
 
@@ -27,7 +28,7 @@
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:0A66C2,50:2F81F7,100:58A6FF&text=Parshv%20Patel&fontColor=ffffff&fontSize=52&fontAlign=50&fontAlignY=36&desc=Data%20Science%20%C2%B7%20Machine%20Learning%20%C2%B7%20Agentic%20AI&descAlign=50&descAlignY=58&descSize=18&animation=fadeIn" alt="Parshv Patel">
 
 <a href="https://www.portfolio.parshvpatel.com/">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2800&pause=900&color=58A6FF&center=true&vCenter=true&width=640&lines=Data+Scientist+%40+UC+Berkeley;Machine+Learning+Engineer;Agentic+AI+Systems+Builder;Data+Engineer+%E2%80%A2+Pipelines+at+Scale;Prev.+Software+Engineer+Intern+%40+Amazon" alt="Data Scientist, Machine Learning Engineer, Agentic AI Systems Builder">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2800&pause=900&color=39D353&center=true&vCenter=true&width=640&lines=Data+Scientist+%40+UC+Berkeley;Machine+Learning+Engineer;Agentic+AI+Systems+Builder;Data+Engineer+%E2%80%A2+Pipelines+at+Scale;Prev.+Software+Engineer+Intern+%40+Amazon" alt="Data Scientist, Machine Learning Engineer, Agentic AI Systems Builder">
 </a>
 
 <br>
@@ -39,9 +40,9 @@
 
 <br><br>
 
-<img src="https://img.shields.io/badge/UC%20Berkeley-B.A.%20Data%20Science%20'29-4F46E5?style=for-the-badge&logo=googlescholar&logoColor=white" alt="UC Berkeley, B.A. Data Science 2029">
-<img src="https://img.shields.io/badge/GPA%204.00-Dean's%20List%20%C3%972-6366F1?style=for-the-badge&logo=academia&logoColor=white" alt="4.00 GPA, Dean's List twice">
-<img src="https://img.shields.io/badge/Berkeley,%20CA-818CF8?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Berkeley, California">
+<img src="https://img.shields.io/badge/UC%20Berkeley-B.A.%20Data%20Science%20'29-0E7490?style=for-the-badge&logo=googlescholar&logoColor=white" alt="UC Berkeley, B.A. Data Science 2029">
+<img src="https://img.shields.io/badge/GPA%204.00-Dean's%20List%20%C3%972-0891B2?style=for-the-badge&logo=academia&logoColor=white" alt="4.00 GPA, Dean's List twice">
+<img src="https://img.shields.io/badge/Berkeley,%20CA-22D3EE?style=for-the-badge&logo=googlemaps&logoColor=0D1117" alt="Berkeley, California">
 
 </div>
 
@@ -49,17 +50,22 @@
 
 ## About
 
-### I build systems that turn messy data into decisions, and agents that act on them.
+### Hi, I'm Parshv. I'm a sophomore at UC Berkeley who builds things with data.
 
-**Data Science at UC Berkeley**, 4.00 GPA, Dean's List every term.
-**Software Engineer Intern at Amazon** last summer: redesigned config resolution for a batch ML inference platform, shipped live, zero incidents.
+I study **Data Science at UC Berkeley**, and I spent this past summer as a **Software Engineer Intern at Amazon** in Seattle working on a batch ML inference platform. 4.00 GPA, Dean's List every term, though the transcript is the least interesting thing here.
 
-I work where **data engineering, machine learning and agentic AI** meet. Retrieval over 29K products. Multi-agent LangGraph workflows running as a paid product. ETL over 15M+ records. Fine-tuned transformers behind production APIs.
+Most of what I actually know came from building. There are **23 finished projects** behind me: agents, computer vision, search engines, ETL pipelines, dashboards. I built a grocery budget optimizer because my mom wanted one. I wrote a data ethics module for high school students because that curriculum did not exist yet.
 
-What I care about is the unglamorous half: schema design, failover paths, evaluation, and the tests that let you ship on a Friday.
+**What gets me going:** the moment a messy pile of data starts answering questions. Agents that recover instead of crashing. Code a stranger can still read six months later.
+
+**What I am not:** someone who ships a notebook and calls it a product. I would rather spend the extra day on the schema, the failure path, and the tests.
+
+Away from the keyboard I volunteer and mentor, 136+ hours logged so far.
 
 > ### Open to Summer 2027 internships
 > Data Science &middot; Data Engineering &middot; Machine Learning &middot; AI and Agentic Engineering
+>
+> Always up for collaborating on AI, ML, Data Science, Agentic AI or Data Engineering projects. My inbox is open.
 
 ---
 
@@ -353,17 +359,19 @@ A 2D fluid-dynamics solver written from first principles for UC Berkeley Physics
 
 ```yaml
 building:
-  - "Agentic systems in LangGraph: planner, critic and tool-use topologies"
-  - "Hybrid search: vector and keyword retrieval fused for one domain"
-  - "Data pipelines that stay interactive past 10M rows"
+  - "Automation and personal assistant agents"
+  - "Computer vision projects"
+  - "Data science work, end to end"
 
 learning:
-  - "Distributed data engineering: Spark, streaming, warehouse modelling"
-  - "Evaluation for LLM systems, the part everyone skips"
+  - "Data engineering"
+  - "Discrete mathematics"
+  - "NLP and large language models"
+  - "Agents and agentic coding"
 
 open_to:
   - "Summer 2027 internships: Data Science, Data Engineering, ML, AI Engineering"
-  - "Open-source collaboration on AI tooling and evaluation"
+  - "Collaborating on AI, ML, Data Science, Agentic AI and Data Engineering projects"
 ```
 
 ---
@@ -383,7 +391,9 @@ open_to:
 
 <br><br>
 
-<i>Good models are cheap. Good data, good schemas, and good failure modes are what actually ship.</i>
+<h3>"The purpose of computing is insight, not numbers."</h3>
+
+<i>Richard Hamming</i>
 
 </div>
 

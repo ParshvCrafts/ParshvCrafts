@@ -20,6 +20,15 @@ import re
 import urllib.request
 
 SOURCE = "https://go-skill-icons.vercel.app/api/icons?i=%s&theme=%s"
+DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/%s.svg"
+
+# go-skill-icons draws CSS as a flat purple tile. The recognisable CSS mark is
+# the blue shield with the 3, which pairs with the orange HTML5 shield, so both
+# of those come from devicon instead. Same size, same row, deliberate pair.
+OVERRIDES = {
+    "html": "html5/html5-original",
+    "css": "css3/css3-original",
+}
 
 CELL = 256          # icon viewBox is 256x256
 SIZE = 54           # rendered icon size in px
@@ -35,11 +44,14 @@ GROUPS = [
 ]
 
 
-def fetch(name, theme):
-    url = SOURCE % (name, theme)
+def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": "profile-techstack"})
     with urllib.request.urlopen(req, timeout=40) as resp:
         return resp.read().decode("utf-8")
+
+
+def fetch(name, theme):
+    return get(SOURCE % (name, theme))
 
 
 def inner_markup(doc, name):
@@ -66,12 +78,27 @@ def namespace_ids(markup, prefix):
 
 
 def build(group, names, theme):
-    scale = SIZE / float(CELL)
     parts, x = [], 0.0
     for index, name in enumerate(names):
-        markup = namespace_ids(inner_markup(fetch(name, theme), name), "%s%d" % (group, index))
-        parts.append('<g transform="translate(%.1f,0) scale(%.6f)"><title>%s</title>%s</g>'
-                     % (x, scale, name, markup))
+        prefix = "%s%d" % (group, index)
+        if name in OVERRIDES:
+            doc = get(DEVICON % OVERRIDES[name])
+            box = re.search(r'viewBox="([\d.\-\s]+)"', doc)
+            _, _, vw, vh = [float(v) for v in box.group(1).split()]
+            body = namespace_ids(doc[doc.index(">", doc.index("<svg")) + 1:
+                                     doc.rindex("</svg>")], prefix)
+            # Devicon art is drawn edge to edge; inset it so it optically matches
+            # the tiled icons rather than looming a size larger than them.
+            inset = 0.86
+            k = SIZE / max(vw, vh) * inset
+            dx = x + (SIZE - vw * k) / 2.0
+            dy = (SIZE - vh * k) / 2.0
+            parts.append('<g transform="translate(%.2f,%.2f) scale(%.6f)"><title>%s</title>%s</g>'
+                         % (dx, dy, k, name, body))
+        else:
+            markup = namespace_ids(inner_markup(fetch(name, theme), name), prefix)
+            parts.append('<g transform="translate(%.1f,0) scale(%.6f)"><title>%s</title>%s</g>'
+                         % (x, SIZE / float(CELL), name, markup))
         x += SIZE + GAP
 
     width = int(len(names) * SIZE + (len(names) - 1) * GAP)

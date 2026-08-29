@@ -24,18 +24,18 @@ import urllib.request
 API = "https://api.github.com/graphql"
 
 THEMES = {
-    # Headings and the streak figures are deliberately neutral rather than green.
-    # Green is already carrying the activity chart and the contribution graph;
-    # using it for the type as well made the whole section read as one flat wash.
+    # Card headings are neutral so the section does not read as one flat wash of
+    # green. "figure" is the exception: the three streak numbers stay green,
+    # because they are contribution data and green is reserved for that.
     "dark": {
         "bg": "#0d1117", "border": "#30363d", "title": "#ffffff",
         "text": "#c9d1d9", "muted": "#8b949e", "accent": "#26a641",
-        "grid": "#21262d",
+        "grid": "#21262d", "figure": "#39d353",
     },
     "light": {
         "bg": "#ffffff", "border": "#d0d7de", "title": "#1f2328",
         "text": "#24292f", "muted": "#57606a", "accent": "#2ea043",
-        "grid": "#eaeef2",
+        "grid": "#eaeef2", "figure": "#216e39",
     },
 }
 
@@ -212,7 +212,7 @@ def card_streak(d, c):
     for i, (big, label, sub) in enumerate(cells):
         cx = 77 + i * 153
         out.append('<text x="%d" y="60" fill="%s" font-size="34" font-weight="700" '
-                   'text-anchor="middle">%s</text>' % (cx, c["title"], esc(big)))
+                   'text-anchor="middle">%s</text>' % (cx, c["figure"], esc(big)))
         out.append('<text x="%d" y="84" fill="%s" font-size="13" font-weight="600" '
                    'text-anchor="middle">%s</text>' % (cx, c["text"], esc(label)))
         out.append('<text x="%d" y="102" fill="%s" font-size="11" '
