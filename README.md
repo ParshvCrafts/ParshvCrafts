@@ -124,7 +124,7 @@ A monetized AI travel platform where a **6-agent LangGraph workflow** researches
 | **Monetization** | Stripe Free/Pro tiers &middot; real-time usage tracking &middot; webhooks &middot; automated quota enforcement |
 | **Security** | Google OAuth &middot; JWT &middot; CSRF tokens &middot; rate limiting |
 | **Performance** | Lighthouse-optimized PWA scoring 95+ |
-| **Links** | [Repository](https://github.com/ParshvCrafts/AtlasMind-AI-Trip-Planner) &middot; [Live Demo](https://atlasmind-ai-trip-planner.vercel.app/) &middot; [Video](https://youtu.be/WWb9e_y1B40) |
+| **Links** | [Repository](https://github.com/ParshvCrafts/AtlasMind) &middot; [Live Demo](https://atlasmind-ai-trip-planner.vercel.app/) &middot; [Video](https://youtu.be/WWb9e_y1B40) |
 
 Agent demos are easy; agent *products* are not. Most of the engineering went into the parts users never see - quota enforcement that survives webhook replays, a routing layer that degrades instead of failing, and a graph topology where a bad generation is caught by a critic node rather than by a customer.
 
