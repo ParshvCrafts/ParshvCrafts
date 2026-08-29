@@ -333,20 +333,35 @@ Each row names the system that proves it, so nothing here rests on a job title o
 
 <div align="center">
 
+<!-- These cards are generated in this repository by scripts/cards.py and refreshed
+     twice a day by .github/workflows/cards.yml. They used to come from the shared
+     public github-readme-stats and streak-stats instances, which went down. -->
+
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=ParshvCrafts&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=39D353&text_color=C9D1D9&icon_color=26A641&ring_color=39D353">
-  <img src="https://github-readme-stats.shion.dev/api?username=ParshvCrafts&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=FFFFFF&title_color=216E39&text_color=24292F&icon_color=2EA043&ring_color=216E39" height="165" alt="GitHub statistics">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/card-stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg">
+  <img src="assets/card-stats-dark.svg" width="440" alt="GitHub statistics">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=ParshvCrafts&layout=compact&langs_count=8&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=39D353&text_color=C9D1D9">
-  <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=ParshvCrafts&layout=compact&langs_count=8&include_all_commits=true&count_private=true&hide_border=true&bg_color=FFFFFF&title_color=216E39&text_color=24292F" height="165" alt="Most used languages">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/card-langs-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-langs-light.svg">
+  <img src="assets/card-langs-dark.svg" width="440" alt="Most used languages">
 </picture>
 
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=ParshvCrafts&hide_border=true&background=0D1117&ring=39D353&fire=39D353&currStreakLabel=39D353&sideLabels=C9D1D9&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=8B949E">
-  <img src="https://streak-stats.demolab.com?user=ParshvCrafts&hide_border=true&background=FFFFFF&ring=216E39&fire=2EA043&currStreakLabel=216E39&sideLabels=24292F&currStreakNum=0D1117&sideNums=0D1117&dates=57606A" alt="GitHub contribution streak">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/card-streak-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-streak-light.svg">
+  <img src="assets/card-streak-dark.svg" width="440" alt="Contribution streaks">
+</picture>
+
+<br><br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/card-activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-activity-light.svg">
+  <img src="assets/card-activity-dark.svg" width="100%" alt="Contribution activity over the past year">
 </picture>
 
 <br><br>
