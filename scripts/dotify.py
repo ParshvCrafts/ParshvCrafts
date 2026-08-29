@@ -1,13 +1,14 @@
 """
 Render a photograph as a dot-matrix SVG for the profile README.
 
-Each source pixel of a downscaled copy becomes one <circle>, quantised onto the
-five-step GitHub contribution-graph palette. Brightness picks the palette step and
-also drives the radius, so the portrait reads as a contribution calendar of a face.
+Each source pixel of a downscaled copy becomes one <circle> that keeps the pixel's
+own colour, sized by histogram-equalised luminance so darker regions read as
+heavier dots. A studio backdrop can be keyed out with --key, which leaves the
+subject floating rather than sitting in a box.
 
-The palette only has contrast against one background, so two files are emitted -
-`<name>-dark.svg` and `<name>-light.svg` - and the README selects between them with
-<picture> + prefers-color-scheme.
+Two files are emitted - `<name>-dark.svg` and `<name>-light.svg` - because the
+same pixels that sit well on #0d1117 wash out on white. The README picks between
+them with <picture> + prefers-color-scheme.
 
     python scripts/dotify.py in.jpg -o assets/portrait --cols 96 --key 60 --zoom 0.86
 
@@ -70,39 +71,43 @@ def build(src, out_base, cols, detail, gap, square, key, zoom):
     lum = [int(0.2126 * r + 0.7152 * g + 0.0722 * b) for r, g, b in pixels]
     weight = equalise(lum)
 
-    RAMPS = {
-        "dark":  ["#0d1117", "#0e4429", "#006d32", "#26a641", "#39d353"],
-        # On white, "strong" has to mean darker ink rather than brighter green,
-        # so the light ramp runs the opposite way through the same family.
-        "light": ["#ffffff", "#40c463", "#2ea043", "#216e39", "#0b3d22"],
-    }
+    # A green ramp was tried first, to match the rest of the page. It failed:
+    # equalising a face into five green steps turns the eye sockets and nostrils
+    # into holes and the result reads as a skull rather than a person. Keeping
+    # the photograph's own colour is what makes it recognisable at 230px.
+    #
+    # One variant per theme, because the same pixels that sit well against
+    # #0d1117 wash out against white. The light pass is darkened and its
+    # contrast pushed so the portrait still has weight on a white page.
+    VARIANTS = {"dark": (1.00, 1.00), "light": (0.74, 1.22)}
 
     cell = 10.0
     r_max = cell / 2.0 - gap
     os.makedirs(os.path.dirname(out_base) or ".", exist_ok=True)
 
-    for theme, ramp in RAMPS.items():
+    for theme, (bright, contrast) in VARIANTS.items():
         circles = []
-        for i in range(len(pixels)):
+        for i, (r, g, b) in enumerate(pixels):
             if i in drop:
                 continue
-            # Bright source pixels become the strongest green, exactly as a busy
-            # day does on the contribution calendar.
-            step = min(len(ramp) - 1, int(weight[i] * len(ramp)))
-            if step == 0:
-                continue
-            radius = r_max * ((1.0 - detail) + detail * weight[i])
+            # Dark pixels get the largest dots. The floor keeps highlights
+            # present rather than punching holes through the face.
+            radius = r_max * ((1.0 - detail) + detail * (1.0 - weight[i]))
             if radius < 0.35:
                 continue
+            rgb = tuple(
+                max(0, min(255, int(((v - 128) * contrast + 128) * bright)))
+                for v in (r, g, b)
+            )
             cx = (i % cols) * cell + cell / 2.0
             cy = (i // cols) * cell + cell / 2.0
-            circles.append('<circle cx="%.1f" cy="%.1f" r="%.2f" fill="%s"/>'
-                           % (cx, cy, radius, ramp[step]))
+            circles.append('<circle cx="%.1f" cy="%.1f" r="%.2f" fill="#%02x%02x%02x"/>'
+                           % ((cx, cy, radius) + rgb))
 
         svg = (
             '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" '
             'width="%d" height="%d" role="img" '
-            'aria-label="Portrait rendered as a contribution-graph dot matrix">'
+            'aria-label="Portrait rendered as a dot matrix">'
             "%s</svg>"
         ) % (int(cols * cell), int(rows * cell), int(cols * cell), int(rows * cell),
              "".join(circles))

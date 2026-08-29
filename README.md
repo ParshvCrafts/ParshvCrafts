@@ -14,7 +14,7 @@
        Icons come from go-skill-icons (uniform 48px tiles, theme-aware).
   Portrait: assets/portrait-{dark,light}.svg, regenerate with
        python scripts/dotify.py scripts/source-portrait.jpg -o assets/portrait \
-              --cols 96 --detail 0.65 --key 60 --zoom 0.86
+              --cols 96 --detail 0.55 --key 82 --zoom 0.86
   ============================================================================
 -->
 
@@ -23,7 +23,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="assets/portrait-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/portrait-light.svg">
-  <img src="assets/portrait-dark.svg" width="230" alt="Parshv Patel, rendered as a contribution-graph dot matrix">
+  <img src="assets/portrait-dark.svg" width="230" alt="Parshv Patel, rendered as a dot matrix">
 </picture>
 
 <br>
@@ -340,12 +340,12 @@ Each row names the system that proves it, so nothing here rests on a job title o
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="assets/card-stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg">
-  <img src="assets/card-stats-dark.svg" width="440" alt="GitHub statistics">
+  <img src="assets/card-stats-dark.svg" width="420" alt="GitHub statistics">
 </picture>
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="assets/card-langs-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/card-langs-light.svg">
-  <img src="assets/card-langs-dark.svg" width="440" alt="Most used languages">
+  <img src="assets/card-langs-dark.svg" width="420" alt="Most used languages">
 </picture>
 
 <br>
@@ -353,7 +353,7 @@ Each row names the system that proves it, so nothing here rests on a job title o
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="assets/card-streak-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/card-streak-light.svg">
-  <img src="assets/card-streak-dark.svg" width="440" alt="Contribution streaks">
+  <img src="assets/card-streak-dark.svg" width="420" alt="Contribution streaks">
 </picture>
 
 <br><br>
