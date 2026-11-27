@@ -398,3 +398,4 @@ open_to:
 </div>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:58A6FF,50:2F81F7,100:0A66C2" alt="">
+Portfolio: https://parshvpatel.com
